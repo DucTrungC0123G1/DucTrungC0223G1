@@ -6,12 +6,12 @@
 </head>
 <body>
 <form>
-    <h2>Kiem Tra Tam Giac Vuong Can</h2>
-    <label for="a">Do dai canh A : </label>
+    <h2>Kiem Tra Tam Giac Vuong</h2>
+    <label for="a">Do dai canh A :</label>
     <input type="text" id="a" placeholder="Nhap do dai canh A"><br/>
-    <label for="b">Do dai canh B : </label>
+    <label for="b">Do dai canh B :</label>
     <input type="text" id="b" placeholder="Nhap do dai canh B"><br/>
-    <label for="c">Do dai canh C : </label>
+    <label for="c">Do dai canh C :</label>
     <input type="text" id="c" placeholder="Nhap do dai canh C"><br/>
     <button type="button" onclick="kiemTra()"> Kiem Tra</button>
     <br/>
@@ -31,7 +31,7 @@
         } else if (canhB === Math.sqrt(Math.pow(canhA, 2) + Math.pow(canhC, 2))) {
             document.getElementById("kt").innerText = "La Tam Giac Vuong";
         } else {
-            document.getElementById("kt").innerText = " Day k phai la tam giac vuong"
+            document.getElementById("kt").innerText = " Day khong phai la tam giac vuong"
         }
     }
 </script>

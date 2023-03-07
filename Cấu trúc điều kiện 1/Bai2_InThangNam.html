@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<label for="month">Nhap vao thang</label>
+<input type="text" id="month" placeholder="Nhap so thang"><br/>
+<label for="year"> Nhap vao nam</label>
+<input type="text" id="year" placeholder="Nhap so nam"><br/>
+<button type="button" onclick="kiemTra()">Kiem Tra</button>
+<br/>
+<p id="result" style="color: red"></p>
+<script>
+    function kiemTra() {
+        let month = parseInt(document.getElementById("month").value);
+        let year = parseInt(document.getElementById("year").value);
+        if (month < 0 || month > 12 || year < 0) {
+            document.getElementById("result").innerText = "Hay Nhap Lai Thang Nam";
+            alert("Khong duoc nhap so am");
+        } else {
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("result").innerText = "Nam " + year + " Thang " + month + " Co 31 ngay.";
+                    break;
+            }
+            switch (month) {
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("result").innerText = "Nam " + year + " Thang " + month + " Co 30 ngay.";
+                    break;
+
+            }
+            switch (month) {
+                case 2:
+                    if (year % 4 === 0) {
+                        document.getElementById("result").innerText = "Nam " + year + " Thang " + month + " Co 29 ngay.";
+
+                    } else {
+                        document.getElementById("result").innerText = "Nam " + year + " Thang " + month + " Co 28 ngay.";
+                    }
+                    break;
+                // default:
+                //     document.getElementById("result").innerText = "Hay Nhap Lai Thang "
+            }
+
+        }
+
+    }
+
+</script>
 </body>
 </html>
