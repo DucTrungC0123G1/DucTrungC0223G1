@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Nhap vao so luong"));
+    let hour = parseInt(prompt("Nhap vao so gio lam viec"));
+    let bonus;
+    if (hour >= 200) {
+        bonus = salary * 20 / 100;
+        alert("Tien luong cua ban la " + salary + " Tien Thuong la: " + bonus);
+    } else if (100 <= hour) {
+        bonus = salary * 10 / 100;
+        alert("Tien luong cua ban la " + salary + " Tien Thuong la: " + bonus);
+    } else {
+        alert("ban k co thuong");
+    }
+
+</script>
+
+</body>
+</html>
