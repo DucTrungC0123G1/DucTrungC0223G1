@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arrlength = prompt("nhap vao do dai mang") * 1;
+    let arr = [];
+    for (let i = 0; i < arrlength; i++) {
+        let numb = prompt("nhap vao cac phan tu") * 1;
+        arr.push(numb);
+        console.log(arr)
+    }
+    let count1 = 0;
+    let count2 = 0;
+    for (let j = 0; j < arr.length; j++) {
+        if (j % 2 === 0) {
+            count1++;
+        } else {
+            count2++;
+        }
+    }
+    if (count1 === count2) {
+        alert("ok")
+    } else {
+        alert("no")
+    }
+</script>
 </body>
 </html>
