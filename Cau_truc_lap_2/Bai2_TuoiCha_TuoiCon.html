@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let ageFather;
+    let ageSon;
+    do {
+        ageFather = parseInt(prompt("nhap vao tuoi cha"));
+        ageSon = parseInt(prompt("nhap vao tuoi con"));
+    }while ( ageFather <=( ageSon+25));
+    // let ageFather = parseInt(prompt("nhap vao tuoi cha"));
+    // let ageSon = parseInt(prompt("nhap vao tuoi con"));
+    for (let i = 1; i > 0; i++) {
+        ageFather++;
+        ageSon++;
+        if ((ageFather / ageSon) === 2) {
+            document.write(i);
+            document.write(ageSon);
+            break;
+        }
+        //     break;
+        // } else {
+        //     ageFather = parseInt(prompt("nhap vao tuoi cha"));
+        //     ageSon = parseInt(prompt("nhap vao tuoi con"));
+        // }
+    }
+
+</script>
+
 </body>
 </html>

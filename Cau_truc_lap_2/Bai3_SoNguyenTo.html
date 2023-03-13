@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let isPrime;
+    do {
+        let numb = parseInt(prompt("nhap vao so"));
+        isPrime = true;
+        for (let i = 2; i < numb; i++) {
+            if (numb % i === 0) {
+                isPrime = false;
+                alert(numb + "day k phai snt");
+                break;
+            }
+        }
+        if (isPrime) {
+            alert(numb + "day la snt");
+        }
+
+    } while (!isPrime)
+</script>
 </body>
 </html>
