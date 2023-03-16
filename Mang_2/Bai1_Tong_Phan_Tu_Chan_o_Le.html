@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arrLength = prompt("nhap vao do dai mang") * 1;
+    let arr = [];
+    let sum = 0;
+    for (let i = 0; i < arrLength; i++) {
+        let numb = prompt("nhap vao phan tu mang") * 1;
+        arr.push(numb);
+    }
+    alert(arr)
+    for (let j = 0; j < arr.length; j++) {
+        if (j % 2 !== 0) {
+            if (arr[j] % 2 === 0) {
+                sum += arr[j];
+                console.log(sum);
+            }
+        }
+    }
+</script>
 </body>
 </html>

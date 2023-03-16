@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arrTwoWay = [];
+    // let n = prompt("Nhap so luong mang") * 1;
+    // for (let i = 0; i < n; i++) {
+    //     let arrLength = [];
+    //     let m = prompt("Nhap vao chieu dai mang") * 1;
+    //     for (let j = 0; j < m; j++) {
+    //         arrLength[j] = prompt("Nhap phan tu thu " + j + " cua mang " + i);
+    //     }
+    //     arrTwoWay.push(arrLength);
+    // }
+    let arr = [];
+    let arrLength = prompt("Nhập vào độ dài của mảng") * 1;
+    for (let i = 0; i < arrLength; i++) {
+        let numb = prompt("Nhập vào phần tử của mảng") * 1;
+        if (arr.indexOf(numb) === -1){
+            arr.push(numb);
+        }else {
+            alert("nhap lai mang");
+            i--;
+        }
+    }
+    console.log(arr);
+    // alert(arr.indexOf(9))
+    // let flag = false;
+    // for (let i = 0; i < arr.length - 1; i++) {
+    //     for (let j = i; j < arr.length; j++) {
+    //         if (arr[i] === arr[j] && i != j) {
+    //             flag = true;
+    //             break;
+    //         }
+    //     }
+    // }
+    // if (flag){
+    //     alert("nhap lai mang");
+    // }else {
+    //     alert("mang k trung");
+    // }
+
+</script>
+</body>
+</html>
