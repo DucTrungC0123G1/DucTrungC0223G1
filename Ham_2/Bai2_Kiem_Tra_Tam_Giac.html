@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = prompt("nhap chiều dài cạnh a") * 1;
+    let b = prompt("nhập chiều dài cạnh b") * 1;
+    let c = prompt("nhập chiều dài cạnh c") * 1;
+
+    function checkTriangle() {
+        if (a + b < c || a + c < b || b + c < a) {
+            alert("đây không phải là tam giác");
+        }else if (Math.pow(a,2)===(Math.pow(b,2)+Math.pow(c,2))) {
+            alert("đây là tam giác vuông");
+        }else if (Math.pow(b,2)===(Math.pow(a,2)+Math.pow(c,2))) {
+            alert("đây là tam giác vuông");
+        }else if (Math.pow(c,2)===(Math.pow(b,2)+Math.pow(a,2))) {
+            alert("đây là tam giác vuông");
+        }else {
+            alert("đây là một tam giác");
+        }
+    }
+
+
+checkTriangle(a,b,c);
+</script>
+
 </body>
 </html>

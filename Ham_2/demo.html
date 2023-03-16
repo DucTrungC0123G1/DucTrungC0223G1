@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let input = +prompt('nhập độ dài của mảng')
+    let from = [];
+    for (let i = 0; i < input; i++) {
+        let elementArr = prompt('nhập phần tử')
+        from.push(elementArr)
+    }
+    thayThe2 = []
+    for (let i = 0; i < from[0].length; i++) {
+        let thayThe = from[0][i];
+        thayThe2.push(thayThe);
+    }
+    console.log(thayThe2)
+    let count = 0;
+    for (let i = 0; i < thayThe2.length; i++) {
+        if (i > -1) {
+            count++
+        }
+    }
+    if (count !== 4) {
+        alert(-1)
+    } else {
+        alert(1)
+    }
+    for (let i = 0; i < from.length - 1; i++) {
+        if (thayThe[i] < thayThe[i + 1]) {
+            thayThe.splice(i, 1)
+        }
+    }
+</script>
+
 </body>
 </html>

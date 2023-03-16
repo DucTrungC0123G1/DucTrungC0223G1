@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arrLength = prompt("Nhập chiều dài mảng");
+    let arr = [];
+    for (let i = 0; i < arrLength; i++) {
+        let numb = prompt("Nhập phần tử của mảng");
+        arr.push(numb);
+    }
+    console.log(arr);
+    let n = arr[1] - arr[0];
+    let count = 0;
+
+    function checkArr() {
+        for (let i = 0; i < arr.length; i++) {
+            if ((arr[i + 1] - arr[i]) === n) {
+                count++;
+            }
+        }
+        if (count === arr.length - 1) {
+            alert("ok");
+        } else {
+            alert("ko ok");
+        }
+    }
+
+    checkArr();
+</script>
 </body>
 </html>
