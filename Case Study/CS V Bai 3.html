@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhap so luong mang") * 1;
+    let arrTwoWay = [];
+    let m;
+    for (let i = 0; i < n; i++) {
+        m = prompt("nhap chieu dai mang" + i) * 1;
+        let arrChild = []
+        for (let j = 0; j < m; j++) {
+            arrChild[j] = prompt("Nhap phan tu thu " + j + "cua mang " + i) * 1;
+
+        }
+        arrTwoWay.push(arrChild);
+    }
+    console.log(arrTwoWay);
+
+    function findMaxMin(numb) {
+        let max = arrTwoWay[0][0];
+        let min = arrTwoWay[0][0];
+        for (let i = 0; i < numb.length; i++) {
+            for (let j = 0; j < numb[i].length; j++) {
+                if (max < numb[i][j]) {
+                    max = numb[i][j];
+                }
+                if (min > numb[i][j]) {
+                    min = numb[i][j];
+
+                }
+            }
+
+        }
+        return max + "_" + min;
+    }
+
+    // let arr = [];
+    // // for (let i = 0; i < n; i++) {
+    // //     for (let j = 0; j < m; j++) {
+    // //         if (findMaxMin(arrTwoWay[i][j])) {
+    // //             arr.push(arrTwoWay[i][j])
+    // //
+    // //         }
+    // //     }
+    // // }
+    console.log(findMaxMin(arrTwoWay));
+
+
+</script>
+</body>
+</html>

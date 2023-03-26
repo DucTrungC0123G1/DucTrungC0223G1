@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function characterCount(s1, s2) {
+        s1 = s1.split("");
+        s2 = s2.split("");
+        console.log(s1);
+        console.log(s2);
+        let character = [];
+        for (let i = 0; i < s1.length; i++) {
+            for (let j = 0; j < s2.length; j++) {
+                if (s1[i] === s2[j]) {
+                    character.push(s1[i]);
+                    break;
+                }
+
+            }
+        }
+        console.log(character);
+        return character;
+
+    }
+
+    let s1 = prompt("Nhap vao xau 1");
+    let s2 = prompt("Nhap vao xau 2");
+    characterCount(s1, s2);
+    document.write("so ki tu chung la " + characterCount(s1, s2).length + " gom nhung ki tu " + characterCount(s1, s2));
+
+</script>
+
+</body>
+</html>

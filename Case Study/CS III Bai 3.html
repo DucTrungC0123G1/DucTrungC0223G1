@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhap so luong tu so") * 1;
+    let numerators = [];
+    for (let i = 0; i < n; i++) {
+        let numA = prompt("Nhap tu so ") * 1;
+        numerators.push(numA);
+    }
+    console.log(numerators);
+    let m = prompt("Nhap so luong mau so") * 1;
+    let denominators = [];
+    for (let i = 0; i < m; i++) {
+        let numB;
+        let flag;
+        do {
+            flag = false;
+            numB = prompt("Nhap mau so") * 1;
+            if (numB === 0) {
+                alert(" Mau so phai khac 0");
+                flag = true;
+            }
+        } while (flag);
+        denominators.push(numB);
+    }
+    console.log(denominators);
+    let max = numerators[0] / denominators[0];
+    let index = 0;
+    for (let i = 0; i < numerators.length; i++) {
+        if (max < numerators[i] / denominators[i]) {
+            index = i;
+            max = numerators[i] / denominators[i];
+        }
+    }
+    console.log(max + " Chi so tai vi tri: " + index);
+
+</script>
+
+</body>
+</html>

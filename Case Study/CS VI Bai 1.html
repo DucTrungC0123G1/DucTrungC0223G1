@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form>
+        <h2>Quan ly hoc vien CODE GYM</h2>
+        <label for="nameStudent"> Ten Hoc Vien: </label>
+        <input type="text" placeholder="Nhap ten hoc vien" id="nameStudent" style="width: 150px">
+        <label for="classStudent"> Lop:</label>
+        <input type="text" placeholder="Nhap lop" id="classStudent" style="width: 100px">
+        <label for="emailStudent">Email :</label>
+        <input type="text" placeholder="email@...." id="emailStudent" style="width: 100px"><br/><br/>
+        <label for="bornStudent">BirthDay: </label>
+        <input type="date" id="bornStudent">
+        <label for="moduleStudent">Module: </label>
+        <select id="moduleStudent">
+            <option>Module 1</option>
+            <option>Module 2</option>
+            <option>Module 3</option>
+            <option>Module 4</option>
+            <option>Module 5</option>
+        </select>
+        <button type="button" onclick="addStudent()"> AddStudent</button>
+<!--        <button type="button" onclick="deleteStudent()"> DeleteStudent</button>-->
+    </form>
+</div>
+<hr>
+<div id="tableStudent"></div>
+<script>
+    class StudentCodeGym {
+        constructor(id, name, classes, email, birthday, module) {
+            this.id = id;
+            this.name = name;
+            this.classes = classes;
+            this.email = email;
+            this.birthday = birthday;
+            this.module = module;
+        }
+
+    }
+
+    let student1 = new StudentCodeGym("", "Nguyen Duc Trung", "C0223G1", "trung123@gmail.com", "11/04/1993", "Module 1");
+    let student2 = new StudentCodeGym("", "Nguyen Duc Tri", "C0223G1", "trung123@gmail.com", "11/04/1993", "Module 1");
+    let student3 = new StudentCodeGym("", "Nguyen Van Dung", "C0223G1", "trung123@gmail.com", "11/04/1993", "Module 1");
+    let studentList = [];
+    studentList.push(student1);
+    studentList.push(student2);
+    studentList.push(student3);
+    displayStudent(studentList);
+
+    function displayStudent(studentList) {
+        let table = "<table border='1'style='border-collapse: collapse'>";
+        table += "<tr>" +
+            "<th>ID</th>" +
+            "<th>NAME</th>" +
+            "<th>CLASS</th>" +
+            "<th>EMAIL</th>" +
+            "<th>BIRHDAY</th>" +
+            "<th>MODULE</th>" +
+            "<tr/>";
+        for (let i = 0; i < studentList.length; i++) {
+            table += "<tr>" +
+                "<td>" + "HV" + (i + 1) + "</td>" +
+                "<td>" + studentList[i].name + "</td>" +
+                "<td>" + studentList[i].classes + "</td>" +
+                "<td>" + studentList[i].email + "</td>" +
+                "<td>" + studentList[i].birthday + "</td>" +
+                "<td>" + studentList[i].module + "</td>" +
+                "<td><button onclick='deleteStudent(" + i + ")'>Delete</button> </td>" +
+                "<tr/>";
+        }
+        table += "</table>";
+        document.getElementById("tableStudent").innerHTML = table;
+    }
+
+    function addStudent() {
+        let name = document.getElementById("nameStudent").value;
+        let classes = document.getElementById("classStudent").value;
+        let email = document.getElementById("emailStudent").value;
+        let birthday = document.getElementById("bornStudent").value;
+        let module = document.getElementById("moduleStudent").value;
+        let newStudent = new StudentCodeGym("", name, classes, email, birthday, module);
+        studentList.push(newStudent);
+        displayStudent(studentList);
+        document.getElementById("nameStudent").value = "";
+        document.getElementById("classStudent").value = "";
+        document.getElementById("emailStudent").value = "";
+        document.getElementById("moduleStudent").value = "";
+    }
+
+    function deleteStudent(inforStudent) {
+        const confirmDelete = confirm("You want delete " + studentList[inforStudent].name);
+        if (confirmDelete) {
+            studentList.splice(inforStudent, 1);
+            alert("You had delete ");
+            displayStudent(studentList);
+        }else {
+            alert("You don't delete ");
+        }
+
+    }
+</script>
+</body>
+</html>

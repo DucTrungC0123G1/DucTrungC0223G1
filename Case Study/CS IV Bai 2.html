@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countDifferent(arr) {
+        arr = arr.split("");
+        console.log(arr);
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j]) {
+                    newArr.push(arr[j]);
+                }
+            }
+        }
+        console.log(newArr);
+        return newArr;
+    }
+
+    let arr = prompt("Nhap xau ki tu");
+    countDifferent(arr);
+    document.write("So ki tu giong nhau trong xau la " + countDifferent(arr).length + "<br/>");
+    document.write("Ki tu giong nhau trong xau la : " + countDifferent(arr));
+</script>
+</body>
+</html>

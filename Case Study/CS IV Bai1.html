@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function change(arr) {
+        arr = arr.trim().toLowerCase().split(" ");
+        console.log(arr);
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== "") {
+                newArr.push(arr[i]);
+            }
+        }console.log(newArr);
+        newArr = newArr.join(" ");
+        newArr = newArr.split("");
+        for (let i = 0; i < newArr.length; i++) {
+            if (newArr[i] === " ") {
+                newArr[i + 1] = newArr[i + 1].toUpperCase();
+            }
+        }
+        newArr[0] = newArr[0].toUpperCase();
+        newArr = newArr.join("");
+        console.log(newArr);
+        return newArr;
+    }
+
+    function findMax(arr) {
+        let nameArr = arr.split(" ");
+        let maxArr = nameArr[0];
+        for (let i = 0; i < nameArr.length; i++) {
+            if (maxArr.length < nameArr[i].length) {
+                maxArr = nameArr[i];
+            }
+        }
+        console.log(maxArr);
+        return maxArr;
+    }
+
+    let arr = prompt("Nhap chuoi");
+    change(arr);
+    findMax(arr);
+    document.write("chuoi truoc la " + arr + "<br/>");
+    document.write("chuoi sau chuan hoa " + change(arr) + "<br/>");
+    document.write("tu dai nhat trong chuoi la " + findMax(arr));
+</script>
+</body>
+</html>

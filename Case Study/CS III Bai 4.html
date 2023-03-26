@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="choiceMenu()">MENU</button>
+<br/>
+<script>
+    let menu = ["1. Cafe", "2. Cam Vat", "3. Nuoc Ep Ca Rot", "4. Nuoc Ep Ca Chua", "5. Nuoc Loc", " 6. Nuoc Dua"];
+    for (let i = 0; i < menu.length; i++) {
+        document.write(menu[i] + "<br/>");
+    }
+    document.write("Nhap 7 de thoat Menu.");
+    let price = [5000, 10000, 15000, 15000, 3000, 20000];
+
+    function choiceMenu() {
+        let flag = false;
+        do {
+            let choice = prompt("moi nhap so chon mon") * 1;
+            for (let i = 0; i < menu.length; i++) {
+                if (choice === i + 1) {
+                    alert("ban chon so " + menu[i] + " co gia la: " + price[i] + " VND");
+                    let quantity = prompt("nhap so luong mon da chon") * 1;
+                    let sum = 0;
+                    sum = quantity * price[i];
+                    alert("Tong gia la " + sum + " VND");
+                } else if (choice === 7) {
+                    return;
+                } else {
+                    flag = true;
+                }
+            }
+        } while (flag)
+    }
+</script>
+</body>
+</html>

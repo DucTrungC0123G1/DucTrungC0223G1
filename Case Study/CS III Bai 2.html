@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhap chieu dai mang A ") * 1;
+    let arrA = [];
+    for (let i = 0; i < n; i++) {
+        let numbA = prompt("Nhap phan tu thu " + i + " cua mang A") * 1;
+        arrA.push(numbA);
+    }
+    console.log(arrA);
+    let m = prompt("Nhap chieu dai mang B") * 1;
+    let arrB = [];
+    for (let i = 0; i < m; i++) {
+        let numbB = prompt("Nhap phan tu thu " + i + " cua mang B") * 1;
+        arrB.push(numbB);
+    }
+    console.log(arrB);
+    let missArray = [];
+    // for (let i = 0; i < arrB.length; i++) {
+    //     if (arrA[i]!==arrB[i]){
+    //         missArray.push(arrB[i]);
+    //
+    //     }
+    //
+    // }
+    for (let j = 0; j < arrB.length; j++) {
+        if (arrA.indexOf(arrB[j]) === -1) {
+            missArray.push(arrB[j]);
+        }
+    }
+    document.write("So khong o Mang A la " + missArray);
+</script>
+</body>
+</html>

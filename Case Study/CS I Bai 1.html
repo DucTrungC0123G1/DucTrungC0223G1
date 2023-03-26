@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary;
+    do {
+        salary = prompt("Nhập vào số lương ") * 1;
+    } while (salary < 0)
+    let sum =0;
+    if (salary > 15000000) {
+        sum = salary - ((salary * 20) / 100);
+        alert("Tiền lương là " + salary +" Thực Nhận"+ sum + " Thuế TNCN 20%");
+    }if (salary>=7000000){
+        sum = salary - ((salary*10)/100);
+        alert("Tiền lương là " + salary +" Thực Nhận"+ sum + " Thuế TNCN 10%");
+    }if (salary<7000000){
+        sum = salary - ((salary*5)/100);
+        alert("Tiền lương là " + salary +" Thực Nhận"+ sum + " Thuế TNCN 5%");
+    }
+</script>
+
+</body>
+</html>

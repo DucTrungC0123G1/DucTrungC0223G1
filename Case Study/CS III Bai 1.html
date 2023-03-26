@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhâp số lượng phần tử mảng A") * 1;
+    let arrA = [];
+    let arrB = [];
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        let numb = prompt("Nhập các phần tử vào mảng") * 1;
+        arrA.push(numb);
+    }
+    for (let i = 0; i < arrA.length; i++) {
+        sum += arrA[i];
+        arrB.push(sum);
+    }
+    alert(arrB);
+
+</script>
+</body>
+</html>
