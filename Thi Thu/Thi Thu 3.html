@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+: Viết hàm có tham số truyền vào là một mảng ,tìm các số fibonaci có trong mảng(số này đã làm bài tập ở jame). Hàm trả
+về 1 mảng số fibonaci được tìm thấy trong mảng ( Yêu cầu sắp xếp tăng dần).
+Gợi ý đây là dãy số fibonaci: 0,1,1,2,3,5,8,13,21,…..
+
+<body>
+<script>
+    let n = prompt("nhap do dai mang") * 1;
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let numb = prompt("nhap phan tu trong mang") * 1;
+        arr.push(numb);
+    }
+    console.log(arr)
+    let n1 = 0;
+    let n2 = 1;
+    let sum;
+    let fibonaci = [];
+    for (let i = 0; i < 10; i++) {
+        // console.log(n1);
+        fibonaci.push(n1);
+        sum = n1 + n2;
+        n1 = n2;
+        n2 = sum;
+
+    }
+    console.log(fibonaci);
+
+    function checkFibonaci(arr) {
+        let arr2 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === fibonaci[i]) {
+                arr2.push(arr[i]);
+            }
+        }
+        console.log(arr2);
+
+
+    }
+
+    checkFibonaci(arr)
+</script>
+</body>
+</html>

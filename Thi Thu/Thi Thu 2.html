@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện tạo ra một cụm từ viết tắt
+- Nếu chuỗi có nhiều hơn hoặc bằng 2 từ trở lên thì hàm sẽ trả về 1 cụm từ viết tắt là lấy các ký tự đầu tiên của từng
+từ và đổi sang in hoa.
+Ví dụ: object Oriented programming => kết quả trả về :OOP
+- Nếu Chuỗi chỉ có duy nhất 1 từ thì kết quả trả về là 1 thông báo "Chuỗi chỉ có 1 từ nên không cần viết tắc"
+- Ví du: ObjectOriented => chuỗi này chỉ được tính chỉ có 1 từ
+Lưu ý : Các từ được xác định bởi 1 hoặc nhiều cách;
+
+<body>
+<script>
+    let arr = prompt("nhap vao chuoi");
+
+    function checkArray(arr) {
+        let newArray = arr.split(' ');
+        console.log(newArray);
+        if (newArray.length === 1) {
+            alert("chuoi nay chi co 1 tu");
+        }
+        newArray = newArray.join(' ');
+        console.log(newArray);
+        newArray = newArray.split('');
+        newArray[0] = newArray[0].toUpperCase();
+        let arr2 = [];
+        arr2.push(newArray[0]);
+        for (let i = 0; i < newArray.length; i++) {
+            if (newArray[i] === ' ') {
+                newArray[i + 1] = newArray[i + 1].toUpperCase();
+                arr2.push(newArray[i + 1]);
+            }
+        }
+        console.log(newArray);
+        console.log(arr2);
+        arr2 = arr2.join("")
+        console.log(arr2);
+        return alert("tu viet ta cua chuoi la " + arr2);
+
+    }
+
+    checkArray(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="tableMay"></div>
+<script>
+    class Computer{
+        constructor(id, name, company, price) {
+            this.id = id;
+            this.name = name;
+            this.company = company;
+            this.price = price;
+        }
+        getID() {
+            return this.id;
+        }
+        setID(id) {
+            this.id = id;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getCompany(){
+            return this.company;
+        }
+        setCompany(company){
+            this.company = company;
+        }
+        getPrice(){
+            return this.price;
+        }
+        setPrice(price){
+            this.price = price;
+
+        }
+        toString() {
+            return 'ID  :' + this.id + 'Name:' + this.name + 'Company :' + this.company
+        }
+
+    }
+    let may1 = new Computer('01','computer1','dell',5000);
+    let may2 = new Computer('02','computer2','asus',5000);
+    let may3 = new Computer('03','computer3','acer',5000);
+    let listMay = [];
+    listMay.push(may1,may2,may3);
+    console.log(listMay);
+    function displayListMay(listMay) {
+        let table = "<table border='2' style='border-collapse: collapse'>";
+        table += "<tr>" +
+            "<th>ID</th>" +
+            "<th>NAME</th>" +
+            "<th>COMPANY</th>" +
+            "<th>PRICE</th>" +
+            "</tr>";
+        for (let i = 0; i < listMay.length; i++) {
+            table += "<tr>" +
+                "<td>"+listMay[i].id+"</td>" +
+                "<td>"+listMay[i].name+"</td>" +
+                "<td>"+listMay[i].company+"</td>" +
+                "<td>"+listMay[i].price+"</td>" +
+                "</tr>";
+        }
+        table+= "</table>";
+        document.getElementById("tableMay").innerHTML = table;
+    }
+    displayListMay(listMay)
+
+</script>
+</body>
+</html>
+
+
+
+
